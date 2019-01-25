@@ -1,3 +1,5 @@
+### KEY: Problem 2 was incomplete 
+
 # Python Review of Misc Topics - JavaScript/Python comparison, Loops, Functions
 
 ### Problem 1:

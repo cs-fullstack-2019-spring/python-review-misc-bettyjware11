@@ -34,8 +34,10 @@ def Problem2():
 
 
 def exercise2():
-    exercise2_helper()
+    # We should be calling the helper functionand pass in the 4 arguments
+    # exercise2_helper()
 
+# KEY: This function should accept 3 numbers and the operation to perform
 def exercise2_helper(num1, num2, num3):
     userInput1 = input(int("Enter a number"))
     userInput2 = input(int("Enter a number"))
@@ -43,6 +45,31 @@ def exercise2_helper(num1, num2, num3):
     addTheNums = (userInput1 + userInput2 + userInput3)
     getTheProd = (userInput1*userInput2*userInput3)
     getTheAvg = (addTheNums/3)
+
+#################################
+# KEY: PROBLEM 2 SOLUTION
+#################################
+def problem2_solution():
+    # Helper function can be nested or outside of this function
+    def exercise2_helper_solution(num1, num2, num3, operation):
+        if (operation.lower() == "sum"):
+            return (num1 + num2 + num3)
+        elif (operation.lower() == "prod"):
+            return (num1 * num2 * num3)
+        elif (operation.lower() == "avg"):
+            return ((num1 + num2 + num3) / 3)
+        else:
+            print("ERROR")
+
+    # Some test data
+    n1 = 1
+    n2 = 20
+    n3 = 30
+
+    # Test each operation (note: handles operation in any case)
+    print(f"The SUM of the numbers {n1}, {n2}, {n3} is: {exercise2_helper_solution(n1, n2, n3, 'SUM')}")
+    print(f"The PRODUCT of the numbers {n1}, {n2}, {n3} is: {exercise2_helper_solution(n1, n2, n3, 'Prod')}")
+    print(f"The AVERAGE of the numbers {n1}, {n2}, {n3} is: {exercise2_helper_solution(n1, n2, n3, 'avg')}")
 
 
 
